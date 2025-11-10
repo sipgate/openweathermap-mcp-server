@@ -20,6 +20,8 @@ export class WeatherTool {
   async getWeather({ city }: { city: string }, _context: Context) {
     const apiKey = this.configService.get<string>("OWM_API_KEY");
 
+    console.log(apiKey);
+
     if (!apiKey) {
       throw new Error("OWM_API_KEY is not set");
     }

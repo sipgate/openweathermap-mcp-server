@@ -60,6 +60,7 @@ You can build and run the server in a Docker container using the provided `start
 ```
 
 - This script builds the Docker image and runs the container, binding port 8080 on your host to port 3000 in the container.
+- If a `.env` file is present, it will be used to pass the `OWM_API_KEY` into the container automatically.
 
 ## Tool: get-weather
 
