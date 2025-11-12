@@ -4,7 +4,7 @@ This project provides a simple Model Context Protocol (MCP) server for retrievin
 
 ## Features
 
-- Exposes a `get-weather` tool to fetch current weather for a given city
+- Exposes a `get-weather-forecast` tool to fetch current weather for a given city
 - Integrates with OpenWeatherMap API (requires API key)
 - Designed for use in MCP agent orchestration systems
 
@@ -49,7 +49,7 @@ OWM_API_KEY=your_openweathermap_api_key_here
    ```bash
    npm run start:dev
    ```
-   The server will listen on port 3000 by default.
+   The server will listen on port 8088 by default.
 
 ### Docker
 
@@ -59,10 +59,10 @@ You can build and run the server in a Docker container using the provided `start
 ./start.sh
 ```
 
-- This script builds the Docker image and runs the container, binding port 8080 on your host to port 3000 in the container.
+- This script builds the Docker image and runs the container, binding port 8088 on your host to port 8088 in the container.
 - If a `.env` file is present, it will be used to pass the `OWM_API_KEY` into the container automatically.
 
-## Tool: get-weather
+## Tool: get-weather-forecast
 
 - **Name:** `get-weather`
 - **Description:** Get current weather for a city using OpenWeatherMap API.
