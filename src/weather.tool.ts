@@ -21,7 +21,7 @@ export class WeatherTool {
       city: z.string().describe("City name to get 5-day forecast for"),
     }),
   })
-  async get5DayForecast({ city }: { city: string }, _context: Context) {
+  async getWeatherForecast({ city }: { city: string }, _context: Context) {
     const apiKey = this.configService.get<string>("OWM_API_KEY");
 
     if (!apiKey) {
